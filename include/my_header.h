@@ -1,9 +1,18 @@
 //  Copyright (c) 2018 Antoine Tran Tan
 //
 
-#ifndef MY_HEADER_H
-#define MY_HEADER_H
+#include "my_header.h"
 
+int main(void)
+{
+    unsigned long long int S1 = 1;
+    unsigned char n = 2;
 
+    while (n<50)
+    {
+        S1 = S1 * n;
+        n = n + 1;
+    }
 
-#endif
+    return 0;
+}
