@@ -1,0 +1,18 @@
+#include "TP_lib_suite.h"
+#include "TP_lib.h"
+#include "cvi_gui.h"
+
+#define LancerDe
+void main (void)
+{
+
+    short resultat, i=0;
+    short int LancerDe;
+
+    while (i<10)
+    {
+
+        resultat =Lancerde();
+        i++;
+    }
+}
