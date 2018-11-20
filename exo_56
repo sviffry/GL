@@ -1,24 +1,51 @@
+#include "stdlib.h"
+
 int main (void)
 
 {
-	unsigned char bin[10]={0;1;2;3;4;5;6;7;8;9}, seuil, i;
+	unsigned char bin[10]={0,1,2,3,4,5,6,7,8,9}, seuil=5, i;
+	int sat[10]={rand()-16383,rand()-16383,rand()-16383,rand()-16383,rand()-16383,rand()-16383,rand()-16383,rand()-16383,rand()-16383,rand()-16383,}, seuilb=-100, seuilh=200, j;
+	
 	
 	for(i=0; i<10; i=i+1)
 	{ 
-		if (bin[10]>seuil)
-		{
+		if (bin[i]>seuil)
+		
 			bin[i]=1;
 				   
-		}
-			   else (bin[10]<seuil)
-		{
+		
+			   else (bin[i]<seuil);
+		
 			bin[i]=0;
-		}
+		
 	}
+	
+	for(j=0; j<10; j=j+1)
+	{
+		if (sat[j]<seuilb)
+			
+			sat[j]=seuilb;
+				   
+		else 	
+			
+			sat[j]=sat[j];
+	
+	
+				   
+		if (sat[j]<seuilh)
+			
+			sat[j]=sat[j] ;
+				   
+		else
+			
+			sat[j]= seuilh  ;
+	}
+				   
+		
+	
 		   return 0;
 	
 }			   
-			
-		
+	
 	
 	
