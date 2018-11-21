@@ -1,11 +1,15 @@
 #include "stdlib.h"
+#include "math.h"
 
 int main (void)
 
 {
 	unsigned char bin[10]={0,1,2,3,4,5,6,7,8,9}, seuil=5, i;
 	int sat[10]={rand()-16383,rand()-16383,rand()-16383,rand()-16383,rand()-16383,rand()-16383,rand()-16383,rand()-16383,rand()-16383,rand()-16383,}, seuilb=-100, seuilh=200, j;
-	
+	int dist[10]={0,1,2,3,4,5,6,7,8,9}, k, b;
+	int taba[5]={1,5,9,8,11};
+	int tabb[5], a, c;
+	int miroir[6]={2,4,6}, d, e;
 	
 	for(i=0; i<10; i=i+1)
 	{ 
@@ -40,12 +44,32 @@ int main (void)
 			
 			sat[j]= seuilh  ;
 	}
-				   
+		
+	for ( k=9, b=8; k>0, b>=0; k=k-1, b=b-1)
+	{
+		
+			dist[k]= fabs(dist[k]-dist[b]);
+			
+	}
+	
+	for( a=0, c=4; a<5, c>=0; a=a+1, c=c-1)
+	{	
+		tabb[a]=taba[c];
+	}
+	
+	for( d=3, e=2; d<6, e>=0; d=d+1, e=e-1)
+	{
+		miroir[d]=miroir[e];
+	}
+	
+
+	
 		
 	
 		   return 0;
 	
 }			   
+
 	
 	
 	
